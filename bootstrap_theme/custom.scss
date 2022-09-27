@@ -95,6 +95,7 @@ $theme-colors: (
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-rounded: false;
 $enable-shadows: true;
+$enable-cssgrid: true;
 $enable-rfs: false;
 $enable-negative-margins: true;
 
@@ -179,6 +180,19 @@ $utilities: map-merge(
       class: css-columns,
 	  responsive: true,
       values: 2 3 4 6,
+    ),
+	"css-grid-row-gap": (
+      property: row-gap,
+      class: row-gap,
+	  responsive: true,
+      values: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer * 1,
+        4: $spacer * 1.5,
+        5: $spacer * 2,
+      ),
     ),
     "border": (
       property: border,
