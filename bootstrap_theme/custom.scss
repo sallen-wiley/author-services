@@ -1,8 +1,7 @@
-/* Bootstrap theme customized with Pinegrow Web Editor */
-/* Vars go before the @import */
-/* Click on the Uncomment icon in the Style panel to uncomment and customize the variables:
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/functions";
 
-IMPORTANT: Customize SASS maps just before @import "bootstrap/maps" statement, not here */
+// 2. Include any default variable overrides here
 // Wiley brand 2021
 $dark-green: #115c36;
 $medium-green: #198c53;
@@ -134,17 +133,12 @@ $headings-font-weight: $font-weight-bold;
 $list-inline-padding: $spacer * 1.5;
 $btn-font-weight: $font-weight-bold;
 
-@import "bootstrap/mixins/banner";
-
-@include bsBanner("");
-
-// Configuration
-@import "bootstrap/functions";
+// 3. Include remainder of required Bootstrap stylesheets
 @import "bootstrap/variables";
 
-/* Customize Bootstrap maps here */
-// Example: add custom colors to theme colors
+// 4. Include any default map overrides here
 // $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+// 5. Include remainder of required parts
 @import "bootstrap/maps";
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
